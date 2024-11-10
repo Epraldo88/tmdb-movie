@@ -31,7 +31,7 @@ const Navbar = () => {
 				{/* Logo */}
 				<div className="text-2xl font-bold">
 					<NavLink to="/" className="text-white">
-						MyApp
+						TMDB
 					</NavLink>
 				</div>
 

@@ -45,8 +45,8 @@ const Detail = () => {
 						<div
 							className="top-0 left-0 w-full bg-cover bg-center"
 							style={{
-								backgroundImage: movie.backdrop_path
-									? `linear-gradient(to top, rgba(3, 3, 3, 1), rgba(0, 0, 0, 0.3)), url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`
+								backgroundImage: movie?.backdrop_path
+									? `linear-gradient(to top, rgba(3, 3, 3, 1), rgba(0, 0, 0, 0.3)), url(https://image.tmdb.org/t/p/original${movie?.backdrop_path})`
 									: "none",
 							}}
 						>
@@ -56,58 +56,58 @@ const Detail = () => {
 										<div className="flex gap-8">
 											<div>
 												<img
-													src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-													alt={movie.title}
+													src={`https://image.tmdb.org/t/p/original${movie?.poster_path}`}
+													alt={movie?.title}
 													className="w-[450px]"
 												/>
 											</div>
 											<div>
-												<h1 className="">{movie.title}</h1>
-												<h3>{movie.tagline}</h3>
+												<h1 className="text-2xl">{movie?.title}</h1>
+												<h3>{movie?.tagline}</h3>
 												<Divider />
-												<h1>Detail</h1>
+												<h1 className="text-xl mb-2">Detail</h1>
 												<div>
 													<DetailLabel
 														label={"Genres"}
-														value={movie.genres
+														value={movie?.genres
 															.map((res) => res.name)
 															.join(", ")}
 													/>
 													<DetailLabel
 														label={"Country"}
-														value={movie.origin_country.join(", ")}
+														value={movie?.origin_country.join(", ")}
 													/>
 													<DetailLabel
 														label={"Popularity"}
-														value={movie.popularity}
+														value={movie?.popularity}
 													/>
 													<DetailLabel
 														label={"Release Date"}
-														value={movie.release_date}
+														value={movie?.release_date}
 													/>
-													<DetailLabel label={"Status"} value={movie.status} />
+													<DetailLabel label={"Status"} value={movie?.status} />
 													<DetailLabel
 														label={"Spoken Languages"}
-														value={movie.spoken_languages
+														value={movie?.spoken_languages
 															.map((res) => res.name)
 															.join(", ")}
 													/>
 													<DetailLabel
 														label={"Production Companies"}
-														value={movie.production_companies
+														value={movie?.production_companies
 															.map((res) => res.name)
 															.join(", ")}
 													/>
 													<DetailLabel
 														label={"Production Countries"}
-														value={movie.production_countries
+														value={movie?.production_countries
 															.map((res) => res.name)
 															.join(", ")}
 													/>
 												</div>
 												<Divider />
-												<h1>Storyline</h1>
-												<p>{movie.overview}</p>
+												<h1 className="text-xl mb-2">Storyline</h1>
+												<p>{movie?.overview}</p>
 											</div>
 										</div>
 										<div className="text-center mt-8">
